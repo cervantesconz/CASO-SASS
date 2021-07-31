@@ -1,0 +1,17 @@
+.red1{
+    background-color: purple;
+    
+}
+.red2{
+    @extend .red1;
+}
+.red3{
+    @extend .red1;
+}
+
+img{
+   width: 500px;
+   height: 500px; 
+}
+
+

@@ -1,0 +1,47 @@
+@mixin size-box($w, $h, $bg-color) {
+  width: $w;
+  height: $h;
+  background-color: $bg-color;
+  margin-top: 10px;
+}
+/*Creamos nuestra caja de propiedades
+con la palabra reservada MIXIN y le 
+asignamos un nombre simbólico*/
+/*Los argumentos que pasamos adentro de los
+parentesis son pequeñas variables que me ayudan
+a definir esos valores de esas propiedades
+en mis elementos(como lo puede ser Box1
+y Box2), siendo $w para width, $h para 
+height y $bg-color para background-color*/
+
+.blog{
+ height: auto;
+}
+.art{
+        
+background-color:$bg-c2;
+height: 400px;
+width: 100%;
+}
+
+.art2{
+  @extend .art;
+  color: $dark-title;
+}
+
+/* Dentro de los paréntesis del include
+vamos a poner nuestros valores que declaramos
+en el mixin de forma ordenada*/
+
+.Box1{
+  @include size-box(400px, 400px, blue)
+
+}
+.Box2{
+  @include size-box(900px, 600px, red)
+}
+
+/* Include nos jala todas las propiedades
+que creamos en la caja mixin*/
+
+
